@@ -1,0 +1,248 @@
+body {
+  margin: 0;
+  
+}
+
+* {
+  font-family: "Lexend", sans-serif;
+}
+
+/* .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(-250deg,#ff4066b3 35%,#fff06ac2 80%);
+} */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  /* padding: 30px 0 80px 0; */
+}
+.home::before {
+  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/scl_pic.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+  z-index: -1;
+}
+.home h1{
+  color:white;
+}
+.home img{
+  height:250px;
+  margin: 20px 0;
+  border-radius: 16px;
+  box-shadow: rgb(245,245,245,0.5) 4px 1px 35px -1px;
+}
+
+.home .openBtn{
+  height: 40px;
+  width:30%;
+  
+  font-size: 1.5rem;
+  
+  background-color: #865dff;
+  border: none;
+  border-radius: 5px;
+  margin: 20px;
+}
+.home .openBtn a{
+  color:white;
+  text-decoration: none;
+}
+.home .shareBtn{
+  background-color:#f5ba13;
+  color:black;
+}
+
+
+/* Card Styling */
+.cardSection {
+  position: relative;
+  z-index: 1;
+  padding: 30px 0 80px 0;
+}
+.cardSection::before {
+  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/scl_pic.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+ height: 100%;
+  filter: brightness(50%);
+  z-index: -1;
+}
+
+.miniCardSection::before{
+  height: 100vh!important;
+}
+.cardWrapper {
+  display: flex;
+  justify-content: start;
+  margin: 20px;
+}
+.cardSection h1 {
+  text-align: center;
+  margin: 0;
+  color: white;
+}
+.cardWrapper:nth-child(even) {
+  justify-content: end;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 60%;
+  padding: 20px;
+  border-radius: 4px;
+  /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
+  /* box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px; */
+  box-shadow: whitesmoke 1px 10px 10px -10px;
+}
+
+
+
+/* Input Bar Styling  */
+.inputArea{
+  display:flex;
+  align-items: center;
+  position: fixed;
+  bottom: 2%;
+  width: 100%;
+}
+
+form.create-note {
+  position: relative;
+  width: 80%;
+  /* margin: 30px auto; */
+  /* background: #fff; */
+  padding: 15px;
+ 
+  /* box-shadow: 0 1px 5px rgb(138, 137, 137); */
+}
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 20px 0 10px 10px;
+   background: #865dff;
+  outline: none;
+  border-radius: 7px;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form  textarea::placeholder {
+  color:white;
+}
+form  input::placeholder {
+  color:white;
+}
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* Share Area Styling */
+.shareArea{
+  padding:30px;
+}
+.shareArea h3{
+  color:white;
+  line-height: 30px;
+  text-align: center;
+}
+
+
+
+/* 
+.addBtn{
+ 
+}
+.addBtn textarea {
+  position: fixed;
+  bottom: 3%;
+  height: 50px;
+  width: 80%;
+  text-align: center;
+  border: none;
+  padding: 15px 0;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  background: #865dff;
+  border-radius: 12px;
+}
+.addBtn input{
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  background: #865dff;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+}
+.addBtn textarea::placeholder{
+  color: white;
+}
+.addBtn input::placeholder{
+  color: white;
+}
+.addBtn  {
+  
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+} */
+
+/* Mobile Size Media Query */
+
+@media only screen and (max-width: 768px) {
+  .cardSection h1 {
+    font-size: 1.5rem;
+  }
+  .cardContent h2 {
+    font-size: 1.3rem;
+  }
+}
