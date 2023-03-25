@@ -7,6 +7,7 @@ import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Home from "./Home";
 import Wall from "./Wall";
 
+
 function App() {
  
   return <div>
@@ -16,6 +17,7 @@ function App() {
 <Route index element={<Home />}/>
     
     <Route path="/wall" element={<Wall/>}/>
+    
     </Route>
   </Routes>
   </BrowserRouter>
